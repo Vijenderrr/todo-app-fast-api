@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dylib
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+env/
+fastapienv/
+
+# Package/build
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Testing/coverage
+.pytest_cache/
+.coverage*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pylint.d/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Databases/SQLite
+*.sqlite3
+*.db
+*.db-journal
+
+# Node
+node_modules/
+
+# Alembic
+alembic/versions/*.pyc

@@ -1,0 +1,41 @@
+{% include "layout.html" %}
+
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            Your Todo's
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                List of your todo's!
+            </h5>
+            <p class="card-text">
+                Informatiion regarding stuff that need to be completed! You can add, edit and delete your todo's as you wish!
+            </p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Info</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for todo in todos %}
+                    <tr class="pointer alert {% if todo.completed %}alert-secondary{% else %}alert-success{% endif %}">
+                        <td>{{loop.index}}</td>
+                        <td class="{% if todo.completed %}strike-through-td{% endif %}">{{todo.title}}</td>
+                        <td>
+                            <button onclick="window.location.href='edit-todo-page/{{todo.id}}'" type="button" class="btn btn-info">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor%}
+                </tbody>
+                
+            </table>
+            <a href="add-todo-page" class="btn btn-primary">Add Todo</a>
+        </div>
+    </div>
+</div>
